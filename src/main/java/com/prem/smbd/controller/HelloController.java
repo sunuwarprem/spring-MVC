@@ -56,6 +56,12 @@ public class HelloController {
         view.addObject("welcome5", "hello "+firstname+ " "+lastname);
         return view;
     }
+    @RequestMapping(value = "/welcome6", method = RequestMethod.GET)
+    public ModelAndView welcome6(@PathVariable("username") String username){
+        ModelAndView view=new ModelAndView("welcome6");
+        view.addObject("message6","username is "+username);
+        return view;
+    }
 
 }
 
